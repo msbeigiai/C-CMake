@@ -2,8 +2,20 @@ cmake_minimum_required(VERSION 3.22)
 
 project(CppProjectTemplate VERSION 1.0.0 LANGUAGES C CXX)
 
-add_library(Library STATIC src/my_lib.cc)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(Executable app/main.cc)
+set(LIBRARY_NAME Library)
+set(EXECUTABLE_NAME Executable)
 
-target_link_libraries(Executable PUBLIC Library)
+option(COMPILE_EXECUTABLE "Whether to compile a executable" OFF)
+
+add_subdirectory(src)
+
+if(COMPILE_EXECUTABLE)
+    add_subdirectory(app)
+# else ()
+#     message("W/O exe. compiling")
+endif()
+
