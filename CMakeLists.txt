@@ -16,6 +16,7 @@ include(AddGitSubmodule)
 #option(COMPILE_EXECUTABLE "Whether to compile the executable" ON)
 
 include(FetchContent)
+include(Docs)
 
 FetchContent_Declare(
 	nlohmann_json
