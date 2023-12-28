@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['my_5flib_2ecc_0',['my_lib.cc',['../my__lib_8cc.html',1,'']]],
-  ['my_5flib_2eh_1',['my_lib.h',['../my__lib_8h.html',1,'']]]
+  ['factorial_0',['factorial',['../my__lib_8cc.html#a052790a3c20cefd7efd98b80322d2a9e',1,'factorial(std::uint32_t number):&#160;my_lib.cc'],['../my__lib_8h.html#a052790a3c20cefd7efd98b80322d2a9e',1,'factorial(std::uint32_t number):&#160;my_lib.cc']]]
 ];
