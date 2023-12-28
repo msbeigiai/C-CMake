@@ -4,3 +4,10 @@ dependency:
 prepare:
 	rm -rf build
 	mkdir build
+
+run:
+	cd build && cmake .. && cmake --build .
+	
+
+build:
+	cd build && cmake --build .

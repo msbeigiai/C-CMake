@@ -1,4 +1,4 @@
 **.vs
 **.user
 /out
-/build
+build/**
