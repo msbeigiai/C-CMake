@@ -9,6 +9,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 option(ENABLE_TESTING "Enable a unit testing build" ON)
 option(ENABLE_DOCS "Enable a docs build" OFF)
 
+option(ENABLE_WARNINGS "Enable a docs build" ON)
+option(ENABLE_WARNINGS_AS_ERRORS "Enable a docs build" ON)
+
 set(LIBRARY "Library")
 set(EXECUTABLE "Executable")
 
@@ -20,6 +23,10 @@ include(AddGitSubmodule)
 
 include(FetchContent)
 include(Docs)
+
+if(ENABLED_WARNINGS) 
+	include(Warnings)
+endif()
 
 FetchContent_Declare(
 	nlohmann_json

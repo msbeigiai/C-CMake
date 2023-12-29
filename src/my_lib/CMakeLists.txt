@@ -19,3 +19,10 @@ target_link_libraries(${LIBRARY} PUBLIC
 	#fmt::fmt
 	spdlog::spdlog
 	cxxopts::cxxopts)
+
+if(${ENABLED_WARNINGS})
+	TARGET_SET_WARNINGS(
+		${LIBRARY} 
+		${ENABLED_WARNINGS}
+		${ENABLE_WARNINGS_AS_ERRORS})
+endif()
